@@ -1,9 +1,10 @@
 name: Pulling_all_trips_data_from_cartrack
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: "01 23 * * *"
+      branches:
+        - main
 
 jobs:
   build:
