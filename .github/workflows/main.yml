@@ -3,9 +3,7 @@ name: Pulling_all_trips_data_from_cartrack
 on:
   schedule:
     - cron: "01 23 * * *"
-      branches:
-        - main
-
+        
 jobs:
   build:
     runs-on: ubuntu-latest
