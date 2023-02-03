@@ -1,6 +1,6 @@
 # required packages
 requests
-# json
+json==3.11.1
 datetime
-calendar
+calendar==5.0
 os
