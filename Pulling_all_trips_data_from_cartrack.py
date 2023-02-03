@@ -36,7 +36,7 @@ def pull_cartrack_data(year, month):
                     response = requests.request("GET", url, headers=headers, data=payload)
                     updated_data = json.loads(response.text)
                     #replace directry with your own directory if need be.
-                    with open("/home/manatsa-m3rc/cartrack_data/new_car-track_trips_data.json", "a") as trips:
+                    with open("new_car-track_trips_data.json", "a") as trips:
                         json.dump(updated_data, trips)
                     trips_data.extend(updated_data)
                     print("movin' on")
@@ -48,7 +48,7 @@ def pull_cartrack_data(year, month):
         print("done")
     else:
         #highlighting on my localhost that script didnt run because its not end of month.
-        with open("/home/manatsa-m3rc/cartrack_data/not_the_end_of_month.txt", "a") as doc_file:
+        with open("not_the_end_of_month.txt", "a") as doc_file:
             doc_file.write("its not the end of the month!!!!!!!!!")
         print("Today is not the last day of the month.")
 
