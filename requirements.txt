@@ -1,0 +1,6 @@
+# required packages
+requests
+json
+datetime
+calendar
+os
